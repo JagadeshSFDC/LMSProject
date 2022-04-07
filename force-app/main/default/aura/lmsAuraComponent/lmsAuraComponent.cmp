@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="inputvalue" type="string" />
+    <aura:attribute name="msgrecived" type="string" />
+    <lightning:messageChannel 
+    type="SampleMessageChannel__c" 
+    onMessage="{!c.handlemessage}"
+    aura:id="sampleMessageChannel" />
+    <lightning:card title="This is aura receiver compoenent">
+        <div >
+            <lightning:input 
+            label="Publish" 
+            type="text" 
+            name="publish" 
+            id="messageinput" 
+            class="slds-input"
+            value="{!v.inputvalue}"
+            onkeyup="{!c.msgsend}"/>
+        </div>
+        <lightning:button label="publishmsg" variant="base" onclick="{!c.publishmsg}" />
+    </lightning:card>
+</aura:component>	
