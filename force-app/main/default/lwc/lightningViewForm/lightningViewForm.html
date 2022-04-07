@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="This is View Form">
+        <lightning-record-view-form
+        object-api-name={objectApiName}
+        record-id={recordId} >
+        <lightning-output-field field-name={fielddetails.lastname}> </lightning-output-field>
+    </lightning-record-view-form>
+    </lightning-card>
+    <lightning-card title="This is Edit Form">
+        <lightning-record-edit-form
+        object-api-name={objectname} >
+        <lightning-messages></lightning-messages>
+        <lightning-input-field field-name={fielddetails.lastname}> </lightning-input-field>
+        <lightning-input-field field-name={fielddetails.Phone}> </lightning-input-field>
+        <div class="slds-var-m-top_medium">
+            <lightning-button variant="brand" onclick={resetpage} label="cancel"></lightning-button>
+            <lightning-button variant="brand" type="submit" label="Save">
+            </lightning-button>
+        </div>
+    </lightning-record-edit-form>
+    </lightning-card>
+</template>
