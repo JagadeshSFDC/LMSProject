@@ -1,5 +1,6 @@
 import { LightningElement,api } from 'lwc';
 import account_object from '@salesforce/schema/Account'
+import {ShowToastEvent} from 'lightning/platformShowToastEvent'
 export default class RecordEditCustomValidation extends LightningElement {
     objectname=account_object
     nameinfo
@@ -23,6 +24,17 @@ export default class RecordEditCustomValidation extends LightningElement {
             this.template.querySelector('lightning-record-edit-form').submit(fields)
         }
         inputfield.reportValidity()
+    }
+    successHandler(event)
+    {
+        const show=new ShowToastEvent(
+            {
+                title:'Success',
+                message:'Account Created Successfully',
+                variant:'success'
+            }
+        )
+        this.dispatchEvent(show);
     }
 
 }

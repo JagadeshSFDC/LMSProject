@@ -2,7 +2,8 @@
     <lightning-card title="This is custom Validation Test">
         <lightning-record-edit-form 
         object-api-name={objectname}
-        onsubmit={handleValidation}>
+        onsubmit={handleValidation}
+        onsuccess={successHandler}>
         <lightning-input label="Name" value={nameinfo} onkeyup={changeinput}></lightning-input>
         <lightning-button type="submit" label="Submit" ></lightning-button>
         </lightning-record-edit-form>
