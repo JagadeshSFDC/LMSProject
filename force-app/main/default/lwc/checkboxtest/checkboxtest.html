@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="CheckBox Checking">
+        <lightning-input label="Checkbox" type="checkbox" name="checkbox1" onchange={handlecheckbox} ></lightning-input>
+        <template if:true={valuecheckbox}>
+            <h1>CheckBox is Enabled</h1>
+        </template> 
+    </lightning-card>
+</template>

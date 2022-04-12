@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="This is PickList Value">
+        <template if:true={recordinfo.data} >
+            <div>This will give Industry picklist values ...!</div>
+        </template>
+        <lightning-combobox
+            name="Industry"
+            label="Industry"
+            value={selectPicklist}
+            placeholder="Select Industry"
+            options={picklistvalues}
+            onchange={handleChange} ></lightning-combobox>
+
+    <p>Selected value is: {selectPicklist}</p>
+    </lightning-card>
+</template>
