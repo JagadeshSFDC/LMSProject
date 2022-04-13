@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="This is PickList Value">
+    <!--This is the combobox for picklist values in LWC-->
+       <lightning-combobox 
+        name="Rating"
+        label="Rating"
+        value={selectedValue}
+        options={RatingPickValue}
+        placeholder="Enter the Rating"
+        onchange={handlechange}>
+        </lightning-combobox>
+        <div>Selected Type Rating - {selectedValue}</div>
+    </lightning-card>
+</template> 
